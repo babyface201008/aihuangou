@@ -448,8 +448,8 @@ class McyFrontUserController extends Controller
   }
   public function userData(Request $request)
   {
-    $openid = $request->session()->get('openid');
-    $mcy_user = McyUser::where('openid',$openid)->where('is_delete',0)->first();
+    //$openid = $request->session()->get('openid');
+    $mcy_user = McyUser::getUserInfo();
     /* 充值记录最近50条 */
     $charge = McyTopUp::where('is_delete',0)->where('mcy_user_id',$mcy_user->mcy_user_id)->where('status',1)->limit(50)->orderBy('created_at','desc')->get();
     /* 消费记录最近50条 */

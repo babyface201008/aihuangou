@@ -4,7 +4,7 @@ $(function() {
 	var ac = addCart = $(".addCart");
 	var host = location.host;
 	//其它页面点击购物车按钮
-	$('body').on("click", '.addCart', function (o) {
+	$(document).on("click", '.addCart', function (o) {
 		var pid = $(this).attr('pid');
 		var n = $(this).attr('n');
 		var qishu = $(this).attr('qishu');
@@ -121,7 +121,7 @@ $(function() {
 
 			if (json.ret == 0){
 				_this.prev(".product_number").val(parseInt(_this.prev(".product_number").val()) + parseInt(n));
-				//location.href = location.pathname + '?v='+GetVerNum();
+				location.href = location.pathname + '?v='+GetVerNum();
 				return true;
 			}else{
 				/* 失败信息*/
@@ -137,7 +137,7 @@ $(function() {
         $.getJSON('/api/zhiding/cart/' + pid + '/' + n,{"qishu":qishu,'type':5},function(json){
             if (json.ret == 0){
                 _this.prev(".product_number").val(parseInt(_this.prev(".product_number").val()) + parseInt(n));
-               // location.href = location.pathname + '?v='+GetVerNum();
+                location.href = location.pathname + '?v='+GetVerNum();
 
                 return true;
             }else{
