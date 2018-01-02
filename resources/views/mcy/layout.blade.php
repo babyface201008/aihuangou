@@ -23,7 +23,7 @@
       function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
 </script>
 <link rel="stylesheet" href="/chyyg1/welkin.css?v=20170925" type="text/css" media="screen">
-<script type="text/javascript" src="/chyyg1/welkin.js?v=27123126"></script>
+<script type="text/javascript" src="/chyyg1/welkin.js?v=27123127"></script>
 <style>
 
     .app-icon-wrapper {
