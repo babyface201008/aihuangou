@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Member/JS/MyWalletFun.js?v=170329");

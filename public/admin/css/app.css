@@ -1,0 +1,126 @@
+ul, ol, dd {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 100;
+  height: 100vh;
+  margin: 0; }
+
+.full-height {
+  height: 100vh; }
+
+.flex-center {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center; }
+
+.position-ref {
+  position: relative; }
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px; }
+
+.content {
+  text-align: center; }
+
+.title {
+  font-size: 84px; }
+
+.links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.m-b-md {
+  margin-bottom: 30px; }
+
+.contianer {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  overflow: auto;
+  overflow-x: hidden; }
+
+.contianer1 {
+  display: inline-block;
+  margin: 0 auto;
+  /*text-align: center;*/
+  overflow: auto;
+  overflow-x: hidden; }
+
+.message {
+  display: none;
+  min-height: 1900px;
+  width: 100vw;
+  margin: auto;
+  margin-top: 10px; }
+
+.content {
+  display: block;
+  width: 100vw;
+  margin: auto; }
+  .content a:hover {
+    color: red; }
+
+.content1 {
+  display: block;
+  width: 100vw;
+  min-width: 900px;
+  text-align: center;
+  margin: auto; }
+  .content1 a:hover {
+    color: red; }
+
+.info_container {
+  display: block;
+  min-width: 900px; }
+
+.info {
+  display: block;
+  margin: 40px auto;
+  min-width: 900px;
+  /*text-align: center;*/
+   }
+
+.code_list {
+  text-align: center; }
+  .code_list ul {
+    list-style: none;
+    text-align: center; }
+  .code_list a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: .31rem;
+    text-decoration: none;
+    text-transform: uppercase; }
+
+/*ibox container*/
+.ibox-container{
+  text-align: left;
+  min-weight:900px;
+  margin-left: 25%;
+  /*margin: auto;*/
+}
+
+/*# sourceMappingURL=app.css.map */

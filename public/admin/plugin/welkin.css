@@ -1,0 +1,29 @@
+@charset utf-8
+
+#login-form {
+	text-align: center;
+}
+.form-children {
+	margin: 5px 5px;
+	padding: 5px 5px;
+	text-align: center;
+}
+.form-children input 
+{
+	margin: 5px 5px;
+}
+#username {
+	max-width: 350px;
+	width: 100% ;
+	height: 34px;
+}
+#password {
+	max-width: 350px;
+	width: 100%;
+	height: 34px;
+}
+.login-btn {
+	max-width: 150px;
+	width: 50%;
+	height: 34px;
+}

@@ -1,0 +1,1 @@
+var isDebug=false;var t=isDebug?new Date().getTime():"170329";Base.getScript(Gobal.Skin+"/Member/JS/UserBuyListFun.js?v="+t);

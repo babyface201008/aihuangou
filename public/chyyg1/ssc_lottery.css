@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#lot {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #FFFDDD;
+    box-sizing: border-box;
+}
+
+.z-minheight #lot {
+    margin-bottom: 0;
+}
+
+#lot .viewTicket {
+    display: block;
+    width: 15rem;
+    height: 2rem;
+    background: #FF5000;
+    margin: 10px auto 0;
+    border-radius: 15px;
+    color: #FFF;
+    line-height: 2rem;
+    text-align: center;
+}
+
+#lot ul {
+    text-align: center;
+}
+
+#lot ul:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+#lot li {
+    height: 32px;
+    list-style: none
+}
+
+#lot li dt, #lot li dd {
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+}
+
+#lot  dl {
+    float: left;
+    border: 1px solid #dc332d;
+    background: #FFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+#lot li dt {
+    font-size: 12px;
+}
+
+#lot li dd {
+    font-size: 10px;
+}
+
+#lot li dt {
+    color: #dc332d
+}
+
+#lot li dd {
+    color: #bbb
+}
+
+#lot li em {
+    float: left;
+    width: 5%;
+    height: 32px;
+    line-height: 32px;
+    color: #ffc163;
+    font-size: 16px;
+    font-style: normal;
+}
+
+#lot li:first-child {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+#lot li:first-child:after {
+    content: '=';/*\21E7*/
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 10px;
+    top: 34px;
+    left: calc(22.5% + 2px);
+    color: #ffc163;
+    font-size: 16px;
+    -webkit-transform: rotate(90deg);
+}
+
+#lot li:first-child dl {
+    width: 23%;
+}
+
+#lot li:first-child dl:first-of-type {
+    width: 30%;
+}
+
+#lot li:first-child dl:nth-of-type(2) {
+    width: 27%;
+    background: #dc332d;
+}
+
+#lot li:first-child dl:nth-of-type(2) * {
+    color: #FFF;
+}
+
+#lot li:last-child dl {
+    width: 25%
+}
+
+#lot li:last-child dl:first-of-type {
+    margin-left: 10%;
+}
+
+#lot li:last-child em:first-of-type {
+    width: 5%
+}
+
+#lot li:nth-child(2) em:nth-of-type(2) {
+    width: 10%
+}
+
+#lotCode {
+    position: fixed;
+    width: calc(100% - 48px);
+    height: 75px;
+    top: 71px;
+    left: 24px;
+    color: #dc332d;
+    background: #e4e4e4;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -webkit-animation: lottering ease-in 3s;
+    -webkit-animation-fill-mode: forwards;
+    z-index: 111;
+}
+
+#lotCode p:first-child {
+    font-size: 25px;
+    line-height: 50px
+}
+
+#lotCode p:last-child {
+    font-size: 14px;
+    line-height: 20px
+}
+
+@-webkit-keyframes lottering {
+    66.6% {
+        -webkit-transform: scale(1);
+        top: 71px;
+    }
+
+    99.9% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(.2);
+        top: 170px;
+        opacity: 0;
+    }
+}

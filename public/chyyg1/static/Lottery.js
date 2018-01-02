@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/DataServer/JS/LotteryFun.js?v=170329");

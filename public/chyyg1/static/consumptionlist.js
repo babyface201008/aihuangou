@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Member/JS/ConsumptionListFun.js?v=170329");

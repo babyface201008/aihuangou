@@ -1,0 +1,1 @@
+Base.getScript(($("#hidIsHttps").val()=="1"?"https://skin.1yyg.net/":"https://skin.1yyg.net/")+($("#hidSiteVer").length==0?"v1":$("#hidSiteVer").val())+"/weixin/JS/BottomFun.js?v=170519");Base.getScript("https://skin.1yyg.net/weixin/JS/cnzzCount.js?date="+new Date().getTime());

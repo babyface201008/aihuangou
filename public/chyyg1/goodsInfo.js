@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/chyyg1/goodsInfoFun.js");

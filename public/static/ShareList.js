@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Member/JS/ShareListFun.js?v=170329");

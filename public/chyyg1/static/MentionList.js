@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Member/JS/MentionListFun.js?v=170421");

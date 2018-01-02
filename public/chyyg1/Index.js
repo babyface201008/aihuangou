@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/chyyg1/NIndexFun.js?v=201870806");

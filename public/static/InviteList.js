@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Member/JS/InviteListFun.js?v=170329");

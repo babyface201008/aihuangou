@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/JS/GoodsSearchFun.js?v=170329");

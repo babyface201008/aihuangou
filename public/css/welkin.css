@@ -1,0 +1,5 @@
+/*清除苹果自身按钮效果*/
+input[type="button"], input[type="submit"], input[type="reset"] {
+-webkit-appearance: none;
+}
+textarea { -webkit-appearance: none;}

@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/MyCart/JS/myPaymentFun.js?v=170504");

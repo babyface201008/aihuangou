@@ -1,0 +1,378 @@
+.wnotice {
+	position: relative;
+	/*margin-bottom: 5px;*/
+	background: #FFF;
+}
+/*.i-shouye {
+	background: url('/') no-repeat !important;
+}*/
+
+.loading-cartlist-img  img{
+	width: 100%;
+}
+
+.welkinhide {
+	display: none;
+}
+.welkinshow {
+	display: inline;
+}
+
+.grayBtn,.orgBtn {
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    color: #fff!important;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+a.orgBtn {
+    background: #dc332d;
+    border: 1px solid #dc332d;
+}
+
+a.grayBtn {
+    background: #ccc;
+    border: 1px solid #ccc;
+}
+
+.load_more {
+    clear: both;
+    margin: 0 0 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.load_more a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #999;
+}
+
+.loading {
+    text-align: center;
+    height: 30px;
+    padding: 10px 0;
+    line-height: 16px;
+    color: #666;
+    background: none;
+}
+
+.loading b {
+    width: 16px;
+    height: 16px;
+    background: url(/v1/weixin/Images/loading.gif) no-repeat;
+    background-size: 16px auto;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    margin-right: 7px;
+}
+
+.noRecords {
+    text-align: center;
+    font-size: 14px;
+    padding: 50px 0;
+}
+
+.noRecords s {
+    display: block;
+    margin: 0 auto 10px;
+    width: 105px;
+    height: 90px;
+}
+
+.noRecords .z-use {
+    font-size: 14px;
+    padding: 15px;
+}
+
+s.z-y9 {
+    background: url(/v1/weixin/Images/y9.png?v=0109);
+    background-size: 105px auto;
+}
+
+s.z-y8 {
+    background: url(/v1/weixin/Images/y8.png?v=0109);
+    background-size: 105px auto;
+}
+
+span.purchase-icon {
+    display: inline-block;
+    background-color: #24cba8;
+    color: #fff!important;
+    font-size: 14px;
+    padding: 0 4px;
+    line-height: 20px;
+}
+
+.pPurchase,.pActivity,.pExchange {
+    width: 70px;
+    height: 16px;
+    line-height: 16px;
+    -webkit-transform: rotate(-45deg);
+    text-align: center;
+    position: absolute;
+    left: -21px;
+    top: 6px;
+    color: #fff;
+    font-size: 10px;
+}
+
+.pPurchase {
+    background-color: #24cba8;
+}
+
+.pActivity {
+    background-color: #dc332d;
+}
+
+.pExchange {
+    background-color: #00dbdb;
+}
+
+.hot-recom {
+    background-color: #fff;
+    margin-bottom: 47px;
+}
+
+.hot-recom .title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 10px;
+    background: #f5f5f5;
+    text-align: center;
+    position: relative;
+}
+
+.hot-recom .title span {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    background: #f5f5f5;
+    padding: 0 10px;
+}
+
+.hot-recom .title span b {
+    display: inline-block;
+    width: 11px;
+    height: 13px;
+    background-position: 0 -698px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.hot-recom .title em {
+    width: 50%;
+    height: 1px;
+    background: #eaeaea;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    margin-left: -25%;
+    top: 20px;
+}
+
+.hot-recom .thin-bor-top:before {
+    background-color: transparent;
+}
+
+.hot-recom .goods-wrap {
+    width: 100%;
+    background-color: #fff;
+}
+
+.hot-recom .goods-list {
+    width: 100%;
+}
+
+.hot-recom .goods-list li {
+    padding: 10px;
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: 186px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hot-recom .goods-list li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-image: -webkit-linear-gradient(top,#dedede,#dedede);
+    background-size: 100% 1px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    bottom: 0;
+    left: 0;
+}
+
+.hot-recom .goods-list li:nth-of-type(even):before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left,#dedede,#dedede);
+    background-size: 1px 100%;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+    top: 0;
+    left: 0;
+}
+
+.hot-recom .goods-list .g-pic img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.hot-recom .goods-list .g-name {
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    margin: 7px 0 2px;
+}
+
+.hot-recom .goods-list ins {
+    text-decoration: none;
+    line-height: 16px;
+}
+
+.hot-recom .goods-wrap .Progress-bar .u-progress {
+    height: 6px;
+}
+
+.hot-recom .goods-wrap .btn-wrap {
+    padding-right: 40px;
+    position: relative;
+    height: 6px;
+    margin: 7px auto 0;
+}
+
+.hot-recom .goods-wrap .buy-btn {
+    display: block;
+    width: 94px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #dc332d
+    color: #dc332d;
+    border-radius: 16px;
+}
+
+.hot-recom .goods-wrap .gRate {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: -21px;
+    right: 0;
+}
+
+.hot-recom .goods-wrap .gRate a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #dc332d;
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+
+.hot-recom .goods-wrap .gRate.add a {
+    background-color: #f40;
+}
+
+.hot-recom .goods-wrap .gRate a s {
+    display: block;
+    width: 17px;
+    height: 22px;
+    background-position: 0 -6px;
+    margin: 0 auto;
+    position: relative;
+    top: 5px;
+    left: -1px;
+}
+
+.weixin-mask {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.3;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 88;
+}
+
+.g-suggest {
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #bbb;
+}
+
+.ann_btn {
+    clear: both;
+    width: 100%;
+    margin-bottom: 77px;
+    font-size: 16px;
+    background: #fff;
+}
+
+.ann_btn a {
+    display: block;
+    padding: 0 10px;
+    height: 42px;
+    line-height: 42px;
+    color: #666;
+}
+
+.ann_btn a s {
+    width: 7px;
+    height: 13px;
+    display: block;
+    background-position: 0 -182px;
+    position: relative;
+    top: 15px;
+}
+
+.ann_btn em {
+    font-size: 10px;
+    color: #bbb;
+}
+
+.pro_foot {
+    clear: both;
+    width: 100%;
+    background: #fff;
+    padding: 6px 0;
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+}
+
+.g-acc-bg {
+    background: #f7f7f7;
+}
+
+.bgColor-white {
+    background: #fff;
+}

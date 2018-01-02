@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Member/JS/UserPointsFun.js?v=170329");

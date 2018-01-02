@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Member/JS/userRechargeFun.js?v=170329");

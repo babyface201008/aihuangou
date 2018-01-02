@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Member/JS/SafeSettingsFun.js?v=160304");

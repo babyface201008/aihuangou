@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Post/JS/DetailFun.js?v=170329");

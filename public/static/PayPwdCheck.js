@@ -1,0 +1,1 @@
+Base.getScript(Gobal.Skin+"/Member/JS/PayPwdCheckFun.js?v=170424");
