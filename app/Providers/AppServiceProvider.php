@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
         //购物车数量
 
         view()->composer('mcy.footer', function ($view) {
-            $cartTotal = count(session('cart'));
+            $cartTotal = session('cart')?count(session('cart')):'';
             $view->with('cartTotal',$cartTotal);
         });
     }

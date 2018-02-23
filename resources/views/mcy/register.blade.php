@@ -34,5 +34,5 @@
 @endsection
 @section('my-js')
 <script src="/chyyg1/RegisterFun.js" language="javascript" type="text/javascript"></script>
-<script src="/chyyg1/pageDialog.js"></script>
+
 @endsection

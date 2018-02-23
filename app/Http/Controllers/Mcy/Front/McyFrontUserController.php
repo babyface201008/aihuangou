@@ -40,7 +40,7 @@ class McyFrontUserController extends Controller
    */
   public function login(Request $request){
       $site = McySite::getInfo();
-      return view('mcy.login',compact('site'));
+    return view('mcy.login',compact('site'));
   }
 
   /**
@@ -54,6 +54,14 @@ class McyFrontUserController extends Controller
       }
       $site = McySite::getInfo();
       return view('mcy.register',compact('site'));
+  }
+
+  /**
+   * 忘记密码
+   */
+  public function password(Request $request){
+    $site = McySite::getInfo();
+    return view('mcy.password',compact('site'));
   }
 
     /**

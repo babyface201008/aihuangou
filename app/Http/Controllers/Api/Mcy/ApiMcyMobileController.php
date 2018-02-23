@@ -157,4 +157,69 @@ class ApiMcyMobileController extends Controller
 		}
 
 	}
+
+
+	/**
+	 * 忘记密码发手机验证码接口
+	 */
+	public function apiForgetPassSend(Request $request){
+
+		$response = new ApiResponse;
+		$mobile = $request->input("mobile","");
+
+		//1.验证手机
+
+		//格式
+		if(!Tools::is_mobile($mobile)){
+			return $response->reply(3,'手机格式不正确');
+		}
+
+		//判断手机号是否注册过
+		$mcy_user = McyUser::where('mobile',$mobile)->where('is_delete',0)->first();
+		if(!$mcy_user){
+			return $response->reply(3,'该手机号还没有注册过');
+		}
+
+		//2.判断手机是否在有限期内或者已经发送
+		$sms = McySendSms::where('mobile',$mobile)->where('is_delete',0)->first();
+		if ($sms){
+			//判断是否在十分钟内
+
+			if (time() <= strtotime($sms->created_at." + 10 mins")) {
+				/* 十分钟内 */
+				return $response->reply(2,'短信已经发送，十分钟内有效');
+			}else{
+				$sms->is_delete = 1;
+				$sms->save();
+			}
+		}
+
+
+		/* 发送消息 */
+		$sms_new = new McySendSms;
+		$sms_new->created_at = date('Y-m-d H:i:s');
+		$sms_new->updated_at = date('Y-m-d H:i:s');
+
+		$result =  Tools\AliSMS::yzm($mobile);
+		$result =json_decode($result);
+		if (@$result->ret == 0){
+			/* 发送成功 写入数据库 */
+			$sms_new->code = $result->code;
+			$sms_new->mobile = $mobile;
+			if ($sms_new->save())
+			{
+
+				return $response->reply(0,'发送成功，短信十分钟内有效');
+			}else{
+				return $response->reply(2,'系统繁忙，请稍后验证');
+			}
+		}else{
+			// echo "bad";
+			return $response->reply(2,'系统繁忙，请稍后验证');
+		}
+
+		return $response->reply(0,'成功');
+
+	}
+
 }

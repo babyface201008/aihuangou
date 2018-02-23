@@ -17,7 +17,7 @@
 							<input type="hidden" value="{!! csrf_token() !!}" id="_token">
 						</dl>
 					</li>
-					<li><a href="javascript:;" id="btnLogin" class="nextBtn colorBtn">登 录</a>
+					<li><a href="javascript:void(0);" id="btnLogin" class="nextBtn colorBtn">登 录</a>
 					{{--	<input name="hidLoginForward" type="hidden" id="hidLoginForward" value="http://m.0769ht.cn/mobile/home/init" /></li>
 					<li>
 						<a href="http://m.0769ht.cn/api/wxlogin" class="nextBtn colorBtn weixiBtn"><i></i>微信登录</a>
@@ -31,5 +31,7 @@
 		<div style="height:45px;"></div>
 @endsection
 @section('my-js')
-			<script id="pageJS" data="/chyyg1/LoginFun.js"></script>
+
+<script language="javascript" type="text/javascript"  src="/chyyg1/LoginFun.js?v=1.0"></script>
+
 @endsection

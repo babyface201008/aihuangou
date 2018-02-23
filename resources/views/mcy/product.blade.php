@@ -2,12 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
-    {{@$product->product_name}}</title><meta content="app-id=518966501" name="apple-itunes-app" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" /><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" /><meta content="telephone=no" name="format-detection" />
+    {{@$product->product_name}}</title><meta content="app-id=518966501" name="apple-itunes-app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
     <link href="/chyyg1/comm.css" rel="stylesheet" type="text/css" />
     <link href="/chyyg1/goods.css?v=17061001" rel="stylesheet" type="text/css" />
     <script src="/chyyg1/jquery190.js" language="javascript" type="text/javascript"></script>
     <script id="pageJS" data="/chyyg1/goodsInfo.js" language="javascript" type="text/javascript"></script>
-    <script src="https://cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
+    <script src="/chyyg1/layer/3.0.1/layer.min.js"></script>
     <script type="text/javascript" src="/chyyg1/welkin.js"></script>
 </head>
 <body>

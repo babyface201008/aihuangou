@@ -16,9 +16,9 @@
 <link href="/chyyg1/swiper-3.3.1.min.css" rel="stylesheet" type="text/css">
 <script src="/chyyg1/swiper-3.3.1.min.js" language="javascript" type="text/javascript"></script>
 <link rel="stylesheet" href="/chyyg1/jquery.fancybox.css" type="text/css" media="screen">
-<script src="https://cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
+<script src="/chyyg1/layer/3.0.1/layer.min.js"></script>
 <script type="text/javascript" src="/chyyg1/jquery.fancybox.pack.js"></script>
-<link href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css" rel="stylesheet">
+<link href="/chyyg1/weui.min.css" rel="stylesheet">
 <script>
       function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
 </script>
@@ -53,7 +53,7 @@
         display: block;
         height: 30px;
         width: 30px;
-        background: rgba(0, 0, 0, 0) url("http://yyg2.chkg99.com/images/weixin_logo.jpg") no-repeat scroll 0 0 / 30px auto;
+       /* background: rgba(0, 0, 0, 0) url("http://yyg2.chkg99.com/images/weixin_logo.jpg") no-repeat scroll 0 0 / 30px auto;*/
         float: left;
     }
 

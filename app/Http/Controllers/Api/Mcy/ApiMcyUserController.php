@@ -38,8 +38,8 @@ class ApiMcyUserController extends Controller
         $response = new ApiResponse;
 
         //接收参数
-        $username = $request->username;
-        $password = $request->password;
+        $username = $request->input("mobile","");
+        $password = $request->input("pass","");
 
         if($username=='' || $password==''){
             return $response->reply(3,'手机号或密码不能为空');
@@ -50,7 +50,7 @@ class ApiMcyUserController extends Controller
             return $response->reply(3,'该用户不存在');
 
         }else{
-            if($mcyUser->password!=Tools::encrypt(base64_decode($password))){
+            if($mcyUser->password!=Tools::encrypt($password)){
 
                 return $response->reply(3,'密码错误');
 
@@ -141,6 +141,53 @@ class ApiMcyUserController extends Controller
        }else{
 
            return $response->reply(3,'手机验证码不正确');
+        }
+    }
+
+    /**
+     * 提交忘记密码
+     */
+    public function apiPostPassword(Request $request){
+        $response = new ApiResponse;
+        //表单验证
+        $validator = Validator::make($request->all(), [
+            'mobile' => "required|size:11",
+            'pass' => 'required|between:6,255',
+            'code'=>'required'
+        ]);
+        if($validator->fails()){
+            return $response->reply(3,$validator->errors()->all());
+        }
+
+        //接受参数
+        $mobile = $request->input("mobile","");
+        $password = $request->input("pass","");
+        $code = $request->input("code","");
+
+        //判断手机号是否注册过
+        $mcy_user = McyUser::where('mobile',$mobile)->where('is_delete',0)->first();
+        if(!$mcy_user){
+            return $response->reply(3,'该手机号还没有注册过');
+        }
+
+
+        //查看输入短信验证码是否正确
+        $phoneCode = McySendSms::where('mobile',$mobile)->where('is_delete',0)->first();
+        if($phoneCode && $phoneCode->code==$code){
+
+            //重置密码
+            $mcy_user->password = Tools::encrypt($password);;
+            $ret = $mcy_user->save();
+            if($ret){
+                return $response->reply(0,'设置成功');
+            }else{
+                return $response->reply(3,'设置失败');
+            }
+
+
+        }else{
+
+            return $response->reply(3,'手机验证码不正确');
         }
     }
 

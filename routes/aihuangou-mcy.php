@@ -539,6 +539,9 @@ Route::get('/userinfo/{mcy_user_id}','Mcy\Front\McyFrontUserController@userInfo'
 Route::get('/login','Mcy\Front\McyFrontUserController@login');
 /*注册*/
 Route::get('/register','Mcy\Front\McyFrontUserController@register');
+/*忘记密码*/
+Route::get('/password','Mcy\Front\McyFrontUserController@password');
+
 /*用户协议*/
 Route::get('/terms','Mcy\Front\McyFrontUserController@terms');
 
@@ -562,12 +565,16 @@ Route::get('/glistajax/{category_id}/{order}/{page}','Api\Mcy\ApiMcyProductContr
 Route::any('/api/index_get_product/{order}/{page}','Api\Mcy\ApiMcyProductController@apiGetProduct');
 
 /*提交登录*/
-Route::get('/api/mcy/user/dologin/{username}/{password}','Api\Mcy\ApiMcyUserController@apiPostLogin');
+Route::post('/api/mcy/user/dologin/','Api\Mcy\ApiMcyUserController@apiPostLogin');
 /*提交注册*/
 Route::post('/api/mcy/user/doregister','Api\Mcy\ApiMcyUserController@apiPostRegister');
+/*提交忘记密码*/
+Route::post('/api/mcy/user/dopassword','Api\Mcy\ApiMcyUserController@apiPostPassword');
 
 /*注册发送短信验证码*/
 Route::post('/api/mcy/user/send/register/sms','Api\Mcy\ApiMcyMobileController@apiRegisterSend');
+/*忘记密码发送短信验证码*/
+Route::post('/api/mcy/user/send/forgetpass/sms','Api\Mcy\ApiMcyMobileController@apiForgetPassSend');
 
 /* 前台倒计时接口 */
 

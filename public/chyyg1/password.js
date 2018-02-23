@@ -21,28 +21,15 @@ $(function() {
 
 
         var mobile = $.trim($('#userMobile').val());
-        var pass   = $.trim($('#txtPassword').val());
         var _token = $.trim($('#_token').val());
 
         if (mobile=='') {
             layer.msg('请输入您的手机号码!');
             return ;
-        };
-
-        if (pass=='') {
-            layer.msg('请输入您的密码!');
-            return ;
-        };
-        if (pass.length<6) {
-            layer.msg('密码必须大于6位!');
-            return ;
-        };
+        }
 
 
-
-
-
-        $.post(Gobal.Webpath+"/api/mcy/user/send/register/sms",{mobile:mobile,_token:_token},function(data){
+        $.post(Gobal.Webpath+"/api/mcy/user/send/forgetpass/sms",{mobile:mobile,_token:_token},function(data){
 
 
             //成功
@@ -86,7 +73,6 @@ $(function() {
             layer.msg("请输入您的手机号码");
             return ;
         }
-
         if (obj.pass=='') {
             layer.msg("请输入您的密码");
             return ;
@@ -100,26 +86,10 @@ $(function() {
         if (obj.code=='') {
             layer.msg("请输入短信验证码");
             return ;
-        }
+        };
 
-        //阿里云
-       /* if(is_ali_reg=='1'){
-            if($('#csessionid').val()=='' && $('#sig').val()=='' && $('#token').val()=='' && $('#scene').val()==''){
-                $.PageDialog.fail('请滑动验证！');
-                return;
-            }
-        }
-        //极验
-        if(is_jy_reg=='1'){
-            if(obj.geetest_challenge=='' && obj.geetest_validate=='' && obj.geetest_seccode==''){
-                $.PageDialog.fail('请点击进行验证!');
-                return ;
-            }
-        }*/
 
-        //obj.pass=base64encode(utf16to8(obj.pass));
-
-        $.post(Gobal.Webpath+"/api/mcy/user/doregister",obj,function(data){
+        $.post(Gobal.Webpath+"/api/mcy/user/dopassword",obj,function(data){
 
             lock2=true; //解锁
 
@@ -130,27 +100,27 @@ $(function() {
 
 
             /*if(data.stat=='4'){
-                $.PageDialog.fail('没有通过滑动验证！');
-                return ;
-            }*/
+             $.PageDialog.fail('没有通过滑动验证！');
+             return ;
+             }*/
 
-            if(data.ret=='3'){
+            if(data.ret!=0){
                 layer.msg(data.msg);
                 return ;
             }
 
             //极验
             /*if(data.stat=='10'){
-                $.PageDialog.fail(data.content);
-                return ;
-            }*/
+             $.PageDialog.fail(data.content);
+             return ;
+             }*/
 
 
             //成功
             if(data.ret=='0'){
-                layer.msg('注册成功');
+                layer.msg('设置成功');
                 setTimeout(function(){
-                    window.location.href=Gobal.Webpath+"/";
+                    window.location.href=Gobal.Webpath+"/login";
                 },2000);
                 return ;
             }
